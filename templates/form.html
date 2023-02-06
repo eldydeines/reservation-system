@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Reservation System{% endblock %}
+
+{% block content %}
+<h2 class="text-center mt-2 mb-2">Currency Converter</h2>
+
+{% for message in messages %}
+<div class=" alert alert-danger" role="alert">
+    {{message}}
+</div>
+{% endfor %}
+
+<form action="" method="POST" class="g-3">
+    <div class='row'>
+        <div class="col">
+            <label for="convert-from" class="form-label">Please enter a three letter currency code to convert from:
+            </label>
+            <input type="text" class="form-control" id="convert-from" name="convert-from" required>
+        </div>
+    </div>
+    <div class='row'>
+        <div class="col">
+            <label for="convert-to" class="form-label">Please enter a three letter currency code to convert to:
+            </label>
+            <input type="text" class="form-control" id="convert-to" name="convert-to" required>
+        </div>
+    </div>
+    <div class='row'>
+        <div class="col">
+            <label for="amount" class="form-label">Please enter an amount to convert: </label>
+            <input type="text" class="form-control" id="amount" name="amount" required>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary">Convert</button>
+    </div>
+</form>
+
+{% endblock %}
